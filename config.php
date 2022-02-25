@@ -620,6 +620,7 @@ class mysql
     FROM productos p
     LEFT JOIN productos_categorias pc ON pc.idproducto = p.id
     WHERE $where
+    GROUP BY p.id
     ORDER BY p.nombre_producto ASC
     LIMIT 100
     ";
